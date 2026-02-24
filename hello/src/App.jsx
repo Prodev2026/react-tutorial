@@ -9,6 +9,10 @@ function App() {
   const [counterValue, setCounterValue] = useState(0);
   return (
     <>
+    <h1 className="text-3xl font-bold underline bg-green-500">
+    this is my first react app!
+  </h1>
+    <hr />
       <FirstComponents/>
         <hr />
       <SecondComponents/>
