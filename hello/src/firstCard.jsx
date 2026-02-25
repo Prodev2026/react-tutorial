@@ -1,10 +1,11 @@
 import React from 'react'
 
 export default function FirstCard({firstObject}) {
+  const {title, desc} = firstObject;
   return (
     <div>
-      <h1>title: {firstObject.title}</h1>
-      <p>desc: {firstObject.desc}</p>
+      <h1>{title}</h1>
+      <p>{desc}</p>
     </div>
   )
 }

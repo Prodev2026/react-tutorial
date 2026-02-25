@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function SecondCard(props) {
+export default function SecondCard({secondObject}) {
+  const {title, desc} = secondObject;
   return (
     <div>
-      <h1>{props.title}</h1>
-      <p>{props.desc}</p>
+      <h1>{title}</h1>
+      <p>{desc}</p>
     </div>
   )
 }
