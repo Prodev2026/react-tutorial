@@ -5,12 +5,24 @@ import WelcomeUser from './WelcomeUser';
 
 
 function App() {
-  const [counterValue, setCounterValue] = useState(0);
-  const isAdmin = false;
+  const [text, setText] = useState("hi!")
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    console.log('================================================')
+    console.log('form submitted!')
+    console.log('================================================')
+
+    
+  }
   return (
-      <div className='text-5xl font-bold italic'>
-        {!isAdmin? <WelcomeAdmin/>:<WelcomeUser/>}
-      </div>
+      <div >
+        <h1 className='mb-16 text-lg font-bold italic'>{text}</h1>
+       <form onSubmit={handleSubmit}>
+        <button type='submit' className='border-[2px] bg-blue-500 text-black py-1 px-2'>
+          submit
+        </button>
+       </form>
+        </div>
   );
 } 
 
