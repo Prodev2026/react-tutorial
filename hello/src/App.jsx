@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import './App.css'
-import Container from './Container';
+import WelcomeAdmin from './WelcomeAdmin';
+import WelcomeUser from './WelcomeUser';
 
 
 function App() {
   const [counterValue, setCounterValue] = useState(0);
+  const isAdmin = false;
   return (
-      <div>
-        <Container/>
+      <div className='text-5xl font-bold italic'>
+        {!isAdmin? <WelcomeAdmin/>:<WelcomeUser/>}
       </div>
   );
 } 
