@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import {cardsList} from './data'
-import Cards from './Cards';
+import Users from '../Users';
 
 function App() {
   const [text, setText] = useState("hi!")
   return (
       <div className='flex gap-x-5'>
-        {cardsList.map((card, index)=>(
-          <Cards key={index} card={card}/>
-        ))}
+      <Users/>
       </div>
   );
 } 
